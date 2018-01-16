@@ -1,0 +1,10 @@
+---Fields in module 'stock_analytic'---
+---XML records in module 'stock_analytic'---
+NEW ir.ui.view: stock_analytic.stock_move_tree
+NEW ir.ui.view: stock_analytic.view_inventory_form
+NEW ir.ui.view: stock_analytic.view_move_form
+NEW ir.ui.view: stock_analytic.view_move_picking_form
+NEW ir.ui.view: stock_analytic.view_move_picking_tree
+NEW ir.ui.view: stock_analytic.view_move_tree
+NEW ir.ui.view: stock_analytic.view_move_tree_receipt_picking
+NEW ir.ui.view: stock_analytic.view_move_tree_receipt_picking_board
