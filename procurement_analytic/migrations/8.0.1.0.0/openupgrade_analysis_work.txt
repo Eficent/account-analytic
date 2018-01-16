@@ -1,23 +1,17 @@
-# done: create records from product_customer_code
+done: rename columns
 
----Fields in module 'product_supplierinfo_for_customer'---
-product_supplierinfo_for_customer / product.supplierinfo     / type (selection)              : NEW selection_keys: ['customer', 'supplier']
+---Fields in module 'procurement_analytic'---
+procurement_analytic / procurement.order        / account_analytic_id (many2one): NEW relation: account.analytic.account
+procurement_analytic / procurement.order        / analytic_account_id (many2one): DEL relation: account.analytic.account
 
-# done in supplierifo module
-
-product_supplierinfo_for_customer / product.template         / customer_ids (one2many)       : NEW relation: product.supplierinfo
-product_supplierinfo_for_customer / product.template         / supplier_ids (one2many)       : NEW relation: product.supplierinfo
 
 # nothing to do
 
----XML records in module 'product_supplierinfo_for_customer'---
-NEW ir.actions.act_window: product_supplierinfo_for_customer.product_supplierinfo_action
-NEW ir.actions.act_window.view: product_supplierinfo_for_customer.product_supplierinfo_customer_act_view
-NEW ir.actions.act_window.view: product_supplierinfo_for_customer.product_supplierinfo_customer_tree_act_view
-NEW ir.ui.menu: product_supplierinfo_for_customer.product_supplierinfo_sale_menu
-NEW ir.ui.view: product_supplierinfo_for_customer.product_supplierinfo_extended_form_view
-NEW ir.ui.view: product_supplierinfo_for_customer.product_supplierinfo_extended_tree_view
-NEW ir.ui.view: product_supplierinfo_for_customer.product_supplierinfo_search_view
-NEW ir.ui.view: product_supplierinfo_for_customer.product_supplierinfo_template_form_view
-NEW ir.ui.view: product_supplierinfo_for_customer.product_supplierinfo_template_tree_view
-NEW ir.ui.view: product_supplierinfo_for_customer.product_template_extended_form_view
+---XML records in module 'procurement_analytic'---
+DEL ir.actions.act_window: procurement_analytic.act_analytic_account_2_procurement_order
+NEW ir.ui.view: procurement_analytic.procurement_form_view_analiytic
+DEL ir.ui.view: procurement_analytic.procurement_form_view
+DEL ir.ui.view: procurement_analytic.procurement_tree_view
+DEL ir.ui.view: procurement_analytic.procurement_tree_view_board
+DEL ir.ui.view: procurement_analytic.view_account_analytic_account_form_procurement_analytic
+DEL ir.ui.view: procurement_analytic.view_procurement_filter
