@@ -1,0 +1,11 @@
+---Fields in module 'procurement_analytic'---
+procurement_analytic / procurement.order        / account_analytic_id (many2one): NEW relation: account.analytic.account
+procurement_analytic / procurement.order        / analytic_account_id (many2one): DEL relation: account.analytic.account
+---XML records in module 'procurement_analytic'---
+DEL ir.actions.act_window: procurement_analytic.act_analytic_account_2_procurement_order
+NEW ir.ui.view: procurement_analytic.procurement_form_view_analiytic
+DEL ir.ui.view: procurement_analytic.procurement_form_view
+DEL ir.ui.view: procurement_analytic.procurement_tree_view
+DEL ir.ui.view: procurement_analytic.procurement_tree_view_board
+DEL ir.ui.view: procurement_analytic.view_account_analytic_account_form_procurement_analytic
+DEL ir.ui.view: procurement_analytic.view_procurement_filter
