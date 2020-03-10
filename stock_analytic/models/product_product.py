@@ -26,10 +26,9 @@ class ProductProduct(models.Model):
             analytic_tags=analytic_tags,
         )
         if res:
-            res[0]['account_analytic_id'] = account_analytic \
-                                            and account_analytic.id
+            res[0]['account_analytic_id'] = \
+                account_analytic and account_analytic.id
             res[0]['analytic_tag_ids'] = \
-                analytic_tags and analytic_tags.ids \
-                and [(6, 0, analytic_tags.ids)] \
-                or False
+                analytic_tags and analytic_tags.ids and \
+                [(6, 0, analytic_tags.ids)] or False
         return res
